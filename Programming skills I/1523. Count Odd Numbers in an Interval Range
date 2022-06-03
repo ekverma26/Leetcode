@@ -1,0 +1,21 @@
+class Solution {
+    public int countOdds(int low, int high) {
+        int i;
+        int j=0;
+        i=high-low+1;
+        if (i%2==0)
+            j=i/2;
+        
+        else
+        {   if(high%2!=0 && low%2!=0)
+        {
+                j=i/2;
+                j=j+1;
+        }
+            else
+                j=i/2;
+        }   
+   
+        return j;
+    }
+}
