@@ -1,0 +1,29 @@
+class Solution {
+    public double average(int[] salary) {
+        int min, max,l,i;
+        double a,sum;
+        min=salary[0];
+        max=salary[0];
+        sum=0;
+        l=salary.length;
+        
+        for(i=0;i<=l-1;i++)
+        {
+            if(min<=salary[i])
+                min=min;
+            else
+                min=salary[i];
+            
+            if(max>=salary[i])
+                max=max;
+            else
+                max=salary[i];
+            sum=sum+salary[i];
+        }
+        
+         
+        sum=sum-min-max;
+        a=sum/(l-2);
+        return a;
+        
+    }
