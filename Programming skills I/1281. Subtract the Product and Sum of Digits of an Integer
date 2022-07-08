@@ -1,0 +1,20 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        
+        int p=1;
+        int s=0;
+        
+        int x=0;
+        while(n!=0)
+        {
+           x=n%10;
+            n=n/10;
+            p=p*x;
+            s=s+x;
+            
+        
+        }
+        
+        return p-s;
+    }
+}
