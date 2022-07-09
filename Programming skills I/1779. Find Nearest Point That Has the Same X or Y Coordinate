@@ -1,0 +1,22 @@
+class Solution {
+    public int nearestValidPoint(int x, int y, int[][] points) {
+        
+        
+       int r=-1;
+       int dis=10000;
+        int dist;
+        
+      for(int i =0;i<points.length;i++)          
+      {
+          if(x!=points[i][0] && y!=points[i][1])
+              continue;
+          dist = Math.abs(x-points[i][0]) + Math.abs(y-points[i][1]);
+          if(dis>dist)
+          {
+              dis=dist;
+              r=i;
+          }
+      }
+        return r;
+    }
+}
